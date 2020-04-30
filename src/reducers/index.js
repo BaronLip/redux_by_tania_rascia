@@ -2,7 +2,7 @@
 import { combineReducers } from 'redux'
 
 // LOCAL/INTERNAL IMPORTS:
-import postsReducer from './postReducer'
+import postsReducer from './postsReducer'
 
 const rootReducer = combineReducers({
 	posts: postsReducer,
