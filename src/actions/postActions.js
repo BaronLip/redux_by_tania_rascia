@@ -12,7 +12,7 @@ export const getPosts = () => ({
 
 export const getPostsSuccess = (posts) => ({
 	type: GET_POSTS_SUCCESS,
-	payload: posts,
+	payload: posts
 })
 
 export const getPostsFailure = () => ({
@@ -20,7 +20,7 @@ export const getPostsFailure = () => ({
 })
 
 // CREATING THE THUNK CALL BY COMBINING THE ACTIONS ABOVE:
-export const fetchPosts() {
+export const fetchPosts = () => {
 	return async dispatch => {
 		dispatch(getPosts());
 
