@@ -8,6 +8,8 @@ import { fetchPosts } from '../actions/postActions'
 import { Post } from '../components/Post'
 
 const PostsPage = ({ dispatch, loading, posts, hasErrors }) => {
+	console.log(posts)
+	
 	useEffect(() => {
 		dispatch(fetchPosts())
 		}, [dispatch]
@@ -38,7 +40,7 @@ const PostsPage = ({ dispatch, loading, posts, hasErrors }) => {
 // })
 
 // Shorthand option:
-const mapStateToProps = state => state.posts;
+const mapStateToProps = state => state.posts; 
 
 // ** `connect` connects state/store to a component in conjunction with mapStateToProps.
 // What this is saying is "Connect State, via mapStateToProps(),to PostsPage".
