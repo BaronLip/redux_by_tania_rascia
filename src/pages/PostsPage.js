@@ -1,14 +1,22 @@
 // EXTERNAL IMPORTS:
 import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+// // useDispatch & useSelector ARE REACT HOOKS THAT REPLACE CONNECT.
 // * Import the connect function from react-redux.
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 
 // LOCAL/INTERNAL IMPORTS:
-import { fetchPosts } from '../actions/postActions'
+import {fetchPosts, postsSelector } from '../slices/posts'
+// fetchPosts is now imported from '..slices/posts'
+// (Previously) import { fetchPosts } from '../actions/postActions'
 import { Post } from '../components/Post'
 
-const PostsPage = ({ dispatch, loading, posts, hasErrors }) => {
-	console.log(posts)
+
+const PostsPage = () => {
+	const dispatch = useDispatch();
+	const {posts, loading, hasErrors} = useSelector(postsSelector);
+	// const PostsPage = ({ dispatch, loading, posts, hasErrors }) => {
+	// 	console.log(posts)
 	
 	useEffect(() => {
 		dispatch(fetchPosts())
@@ -18,6 +26,7 @@ const PostsPage = ({ dispatch, loading, posts, hasErrors }) => {
 	const renderPosts = () => {
 		if (loading) return <p>Loading posts...</p>
 		if (hasErrors) return <p>Unable to display posts.</p>
+		
 		return posts.map(post => <Post key={post.id} post={post}/>) 
 	}
 
@@ -29,6 +38,8 @@ const PostsPage = ({ dispatch, loading, posts, hasErrors }) => {
 		</section>
 	)
 }
+
+export default PostsPage
 
 //** Using mapStateToProps takes the states and attaches it to this component.
 // Redux state is now in the props of this component by mapStateToProps.
@@ -44,4 +55,4 @@ const mapStateToProps = state => state.posts;
 
 // ** `connect` connects state/store to a component in conjunction with mapStateToProps.
 // What this is saying is "Connect State, via mapStateToProps(),to PostsPage".
-export default connect(mapStateToProps)(PostsPage)
+// export default connect(mapStateToProps)(PostsPage)

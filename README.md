@@ -1,9 +1,14 @@
 # redux_by_tania_rascia
 
+## NOTES
 `index.js`
 The terminology of "external", "local", and "assets" is perfect. I struggled with what terms to use while organizing imports on my own. "Local" may also work as "internal" in my mind.
 
-## QUESTIONS
+**RTK** or Redux ToolKit will handle `redux-thunk`, `redux-devtools-extension`. See [redux-toolkit.js.org](https://redux-toolkit.js.org/). Too much to list here.
+
+
+
+## QUESTIONS & ANSWERS
 
 1. Why can't a reducer function be in ES6 syntax?
    * It can be but, for some reason the parser is having issues with the syntax.
