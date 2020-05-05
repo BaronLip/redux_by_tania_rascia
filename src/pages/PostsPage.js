@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 // import { connect } from 'react-redux'
 
 // LOCAL/INTERNAL IMPORTS:
-import {fetchPosts, postsSelector } from '../slices/posts'
+import { fetchPosts, postsSelector } from '../slices/posts'
 // fetchPosts is now imported from '..slices/posts'
 // (Previously) import { fetchPosts } from '../actions/postActions'
 import { Post } from '../components/Post'
@@ -35,7 +35,6 @@ const PostsPage = () => {
 		<section>
 		  	<h1>Posts</h1>
 			{ renderPosts() }
-			
 		</section>
 	)
 }
