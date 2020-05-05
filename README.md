@@ -1,7 +1,7 @@
 # redux_by_tania_rascia
 
 ## STATUS
-~~Updated to use RTK but PostsPage does not return any posts.~~
+~~Updated to use RTK but PostsPage does not return any posts.~~\
 Should complete the other components in the walkthrough separately. Based on lack of knowledge on Redux Toolkit, recommend using standard format of reducers and actions first.
 
 ## NOTES
@@ -12,7 +12,7 @@ The terminology of "external", "local", and "assets" is perfect. I struggled wit
 
 
 
-## QUESTIONS & ANSWERS
+## QUESTIONS & ANSWERS (for my learning process)
 
 1. Why can't a reducer function be in ES6 syntax?
    * It can be but, for some reason the parser is having issues with the syntax.
