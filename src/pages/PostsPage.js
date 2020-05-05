@@ -35,6 +35,7 @@ const PostsPage = () => {
 		<section>
 		  	<h1>Posts</h1>
 			{ renderPosts() }
+			
 		</section>
 	)
 }

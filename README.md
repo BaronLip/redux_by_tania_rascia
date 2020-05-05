@@ -36,3 +36,12 @@ The terminology of "external", "local", and "assets" is perfect. I struggled wit
    2. change `import postsReducer from './postsReducer'` to,
    3. `import postsReducer from '../slices/posts'`. 
    * RTK creates a reducer within the slice files and no longer needs an individual reducer file.
+8. What are the steps to adding new components?
+   1. Does the new component need to contain state?
+      * Yes, create a "page" component.
+      * No, create a "component" component.
+   2. Import the neccesary external/internal resources.
+   3. Check if it needs React-Router elements.
+   4. Create the element with JSX syntax.
+   5. Make sure to export the component or functions.
+
