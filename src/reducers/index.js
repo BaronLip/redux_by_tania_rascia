@@ -2,7 +2,8 @@
 import { combineReducers } from 'redux'
 
 // LOCAL/INTERNAL IMPORTS:
-import postsReducer from './postsReducer'
+// This is what is missing from the walkthrough.
+import postsReducer from '../slices/posts'
 
 const rootReducer = combineReducers({
 	posts: postsReducer,

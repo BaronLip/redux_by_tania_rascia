@@ -1,5 +1,9 @@
 # redux_by_tania_rascia
 
+## STATUS
+~~Updated to use RTK but PostsPage does not return any posts.~~
+Should complete the other components in the walkthrough separately. Based on lack of knowledge on Redux Toolkit, recommend using standard format of reducers and actions first.
+
 ## NOTES
 `index.js`
 The terminology of "external", "local", and "assets" is perfect. I struggled with what terms to use while organizing imports on my own. "Local" may also work as "internal" in my mind.
@@ -26,6 +30,9 @@ The terminology of "external", "local", and "assets" is perfect. I struggled wit
    * Once the PostPage component mounts, it will perform the codeblock.
 6. `PostPage.js`, How is dispatch passed as a prop?
    * `dispatch()` is by default passed to the component once connect() is used.
-
-
-
+7. After utilizing Redux Toolkit in the walkthrough, why are no `posts` rendering?
+   * It is not noted in the walkthrough:
+   1. Go to reducers/index.js.
+   2. change `import postsReducer from './postsReducer'` to,
+   3. `import postsReducer from '../slices/posts'`. 
+   * RTK creates a reducer within the slice files and no longer needs an individual reducer file.

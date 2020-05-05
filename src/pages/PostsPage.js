@@ -16,8 +16,8 @@ const PostsPage = () => {
 	const dispatch = useDispatch();
 	const {posts, loading, hasErrors} = useSelector(postsSelector);
 	// const PostsPage = ({ dispatch, loading, posts, hasErrors }) => {
-	// 	console.log(posts)
-	
+
+	// useEffect is similar to componentDidMount(), the action performs once the component is rendered.
 	useEffect(() => {
 		dispatch(fetchPosts())
 		}, [dispatch]
@@ -26,7 +26,7 @@ const PostsPage = () => {
 	const renderPosts = () => {
 		if (loading) return <p>Loading posts...</p>
 		if (hasErrors) return <p>Unable to display posts.</p>
-		
+		console.log(posts)
 		return posts.map(post => <Post key={post.id} post={post}/>) 
 	}
 
@@ -51,7 +51,7 @@ export default PostsPage
 // })
 
 // Shorthand option:
-const mapStateToProps = state => state.posts; 
+// const mapStateToProps = state => state.posts; 
 
 // ** `connect` connects state/store to a component in conjunction with mapStateToProps.
 // What this is saying is "Connect State, via mapStateToProps(),to PostsPage".
