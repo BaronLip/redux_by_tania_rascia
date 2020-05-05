@@ -2,7 +2,8 @@
 
 ## STATUS
 ~~Updated to use RTK but PostsPage does not return any posts.~~\
-Should complete the other components in the walkthrough separately. Based on lack of knowledge on Redux Toolkit, recommend using standard format of reducers and actions first.
+~~Should complete the other components in the walkthrough separately. Based on lack of knowledge on Redux Toolkit, recommend using standard format of reducers and actions first.~~\
+Complete. There's some fogginess in it's functionality but it's another step in the journey.
 
 ## NOTES
 `index.js`
@@ -12,7 +13,7 @@ The terminology of "external", "local", and "assets" is perfect. I struggled wit
 
 React-router uses `:id` to designate the id within a path, instead of a template string.
 
-When exporting a functional component, use the {curly brackets}.
+Use the {curly brackets} to import a functional component.
 
 ## QUESTIONS & ANSWERS (for my learning process)
 
@@ -47,4 +48,3 @@ When exporting a functional component, use the {curly brackets}.
    4. Create the element with JSX syntax.
    5. Make sure to export the component or functions.
 
-9. How do you console.log within a functional component?
